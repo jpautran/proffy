@@ -2,7 +2,7 @@ const subjects = [
     "Artes",
     "Biologia",
     "Ciências",
-    "Educação Física",
+    "Educação física",
     "Física",
     "Geografia",
     "História",

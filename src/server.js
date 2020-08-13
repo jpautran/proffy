@@ -9,8 +9,9 @@ nunjucks.configure('src/views', {
     noCache: true,
 });
 
-server.use(express.static("public"));
+
 server.use(express.urlencoded({ extended: true }));
+server.use(express.static("public"));
 
 server.get("/", pageLanding);
 server.get("/study", pageStudy);
