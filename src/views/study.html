@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proffy | Sua plataforma de estudos online</title>
+    <title>Proffy | Your online study platform</title>
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="styles/partials/header.css">
     <link rel="stylesheet" href="/styles/partials/forms.css">
@@ -21,12 +21,12 @@
             </div>
 
             <div class="header-content">
-                <strong>Esses são os proffys disponíveis</strong>
+                <strong> These are the available Proffys</strong>
                 <form id="search-teachers">
                     <div class="select-block">
-                        <label for="subject">Matéria</label>
+                        <label for="subject">Subject</label>
                         <select name="subject" id="subject">
-                            <option value="" disabled="" hidden="">Selecione uma opção</option>
+                            <option value="" disabled="" hidden="">Select one option</option>
 
                             {% for subject in subjects %}
                             <option value="{{loop.index}}" {{ "selected" if filters.subject == loop.index }}>
@@ -37,9 +37,9 @@
                         </select>
                     </div>
                     <div class="select-block">
-                        <label for="weekday">Dia da semana</label>
+                        <label for="weekday">Weekday</label>
                         <select name="weekday" id="weekday">
-                            <option value="" disabled="" hidden="">Selecione uma opção</option>
+                            <option value="" disabled="" hidden="">Select one option</option>
 
                             {% for weekday in weekdays %}
                             <option value="{{loop.index0}}" {{ "selected" if filters.weekday == loop.index0 }}>
@@ -49,10 +49,10 @@
                         </select>
                     </div>
                     <div class="input-block">
-                        <label for="time">Hora</label>
+                        <label for="time">Time</label>
                         <input name="time" id="time" type="time" value="{{filters.time}}">
                     </div>
-                    <button type="submit">Filtrar</button>
+                    <button type="submit">Search</button>
                 </form>
             </div>
         </header>
@@ -60,7 +60,7 @@
         <main>
 
             {% if proffys == "" %}
-                <p class="no-results">Nenhum professor encontrado com a sua pesquisa.</p>
+                <p class="no-results">No teachers found with your search.</p>
             {% else %}
 
                 {% for proffy in proffys %}
@@ -77,10 +77,10 @@
 
                         <footer>
 
-                            <p>Preço/hora<strong>R$ {{proffy.cost}}</strong>
+                            <p>Price/Hour<strong>$ {{proffy.cost}}</strong>
                             </p>
                             <a href="https://api.whatsapp.com/send?1=pt_BR&phone=55{{proffy.whatsapp}}&text=Tenho interesse na sua aula de {{proffy.subject}} {{proffy.name}}" class="button" target="_blank">
-                                <img src="/images/icons/whatsapp.svg" alt="whatsapp"> Entrar em contato
+                                <img src="/images/icons/whatsapp.svg" alt="whatsapp"> Contact
                             </a>
                         </footer>
                     </article>

@@ -1,24 +1,24 @@
 const subjects = [
-    "Artes",
-    "Biologia",
-    "Ciências",
-    "Educação física",
-    "Física",
-    "Geografia",
-    "História",
-    "Matemática",
-    "Português",
-    "Química",
+    "Arts",
+    "Biology",
+    "Science",
+    "Physical Education",
+    "Physics",
+    "Geography",
+    "History",
+    "Mathematics",
+    "English",
+    "Chemistry",
 ]
 
 const weekdays = [
-    "Domingo",
-    "Segunda-feira",
-    "Terça-feira",
-    "Quarta-feira",
-    "Quinta-feira",
-    "Sexta-feira",
-    "Sábado",
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
 ]
 
 function getSubject(subjectNumber) {
